@@ -1,0 +1,15 @@
+body {
+    background-color: #eeeeff;
+}
+
+.backgroundWhite {
+    background-color: #f7f7f7;
+}
+
+.btn-orange, .btn-orange:visited {
+    background-color: #ff8300 !important;
+}
+
+.btn-orange:hover, .btn-orange:active{
+	background-color: #e87700 !important;
+}
