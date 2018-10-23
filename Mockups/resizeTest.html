@@ -1,8 +1,13 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="resizeTest.css">
+
     <title>Simple Split Panels - jquery-resizable</title>
     <meta charset="utf-8"/>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
+  
 </head>
 <body style="">
     <div class="page-container">
@@ -21,6 +26,8 @@
 
         <div class="panel-container">
 
+		<div class="panel-left">
+        <div class="panel-container innerCont">
             <div class="panel-left">
                 left panel
             </div>
@@ -28,9 +35,20 @@
             <div class="splitter">
             </div>
 
-            <div class="panel-right">
+			<div class="panel-right">
+                left panel
+            </div>
+		</div>
+		</div>
+            
+			<div class="splitter">
+            </div>
+			
+			<div class="panel-center">
                 right panel
             </div>
+			
+
         </div>
 
         <label>Vertical Splitter Panes:</label>
@@ -47,23 +65,7 @@
                 bottom panel
             </div>
         </div>
-		
-	<script>
-		$(".panel-left").resizable({
-		handleSelector: ".splitter",
-		resizeHeight: false
-		});
-
-		$(".panel-top").resizable({
-		handleSelector: ".splitter-horizontal",
-		resizeWidth: false
-		});
-	</script>
-
-
-
-        <hr />
     </div>
-
+  <script src="resize.js"></script>
 </body>
 </html>
