@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W2UI Demo: layout-2</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
+</head>
+<body>
+
+<div id="layout" style="width: 100%; height: 400px;"></div>
+
+<div id="test1">
+AHHHHHHHHHHHHHHH
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var pstyle = 'border: 1px solid #dfdfdf; padding: 5px;';
+    $('#layout').w2layout({
+        name: 'layout',
+        padding: 4,
+        panels: [
+            { type: 'top', size: 50, resizable: true, style: pstyle, content: '#test1' },
+            { type: 'left', size: 200, resizable: true, style: pstyle, content: 'left' },
+            { type: 'main', style: pstyle, content: 'main' },
+            { type: 'right', size: 200, resizable: true, style: pstyle, content: 'right' }
+        ]
+    });
+});
+</script>
+
+</body>
+</html>

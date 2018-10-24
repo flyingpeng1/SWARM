@@ -32,74 +32,80 @@
 			</div>
 		</nav>
 		
-		<div class="row ml-4 mr-4">
-			<div class="col-3 border border-primary">
-				<h6>System Status: </h6>
-			</div>
-			<div class="col-6 border border-primary">
-				<h6>Current System:</h6>
-				<select class="form-control mb-1" id="accountSelect">
-					<option value="user" selected>System 1</option>
-					<option value="monitor">System 2</option>
-					<option value="admin">System 3</option>
-				</select>
-			</div>
-			<div class="col-3 border border-primary">
-				<h6>System Statistics:</h6>
-			</div>
-		</div>
-		
 	<div class="container mt-2 mb-2 rounded border border-primary">
-	    <div class="grid">
+	<div class="row">
+	<div class="col-12 border border-primary">
+			<h5  class="text-center">Alerts</h5>
+			<div class="ScrollBar" style="height: 130px;">
+			    <div class="mb-2 mt-2">
+				<!--Dynamic section-->
+					<div class="alert alert-warning" role="alert">
+						<strong>Alert!</strong> >Something is happening somewhere.
+					</div>
+					<div class="alert alert-warning" role="alert">
+						<strong>Alert!</strong> >Something is happening somewhere.
+					</div>
+					<div class="alert alert-warning mt-1" role="alert">
+						<strong>Alert!</strong> >Something is happening somewhere.
+					</div>
+					<div class="alert alert-warning" role="alert">
+						<strong>Alert!</strong> >Something is happening somewhere.
+					</div>
+				<!--End Dynamic section-->
+				</div>
+				</div>
+			</div>
+	</div>
+	
 			<div class="row">
-			<div class="col border border-primary">
-				<h6>Current Group:</h6>
+			<div class="col-4 border border-primary">
+				<h5  class="text-center">Current Sensor Group</h5>
 				<select class="form-control mb-1" id="accountSelect">
 					<option value="user" selected>Group 1</option>
 					<option value="monitor">Group 2</option>
 					<option value="admin">Group 3</option>
 				</select>
-				<h6 class="text-center">Available Sensors</h6>
-				<div class="ScrollyBar">
+				<h5 class="text-center">Available Sensors</h5>
+				<div class="ScrollBar">
 					<div class="container">
 					<!--Dynamic section-->
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
 							</button>
 						</div>
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
 							</button>
 						</div>
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
 							</button>
 						</div>
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
 							</button>
 						</div>
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
 							</button>
 						</div>
 						<div class="row">
-							<button class="btn col-11 ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary">
+							<button class="btn ml-1 mr-1 mb-1 rounded border border-orange border-4 btn-primary btn-block">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
 							<h6 class="text-left">Status: not real</h6>
@@ -119,29 +125,12 @@
 					</div>
 			</div>
 			
-			<div class="col border border-primary">
-			    <div class="mb-2">
-					<div class="alert alert-warning" role="alert">
-						<strong>Alert!</strong>
-					</div>
-					<div class="alert alert-warning" role="alert">
-						<strong>Alert!</strong>
-					</div>
-					<div class="alert alert-warning mt-1" role="alert">
-						<strong>Alert!</strong>
-					</div>
-					<div class="alert alert-warning" role="alert">
-						<strong>Alert!</strong>
-					</div>
-				</div>
-			</div>
 		</div>
-	</div>
 		
 		<div class="row">
-			<div class="col-12 border border-primary">
-				Selected:
-						<div class="row">
+			<div class="col border border-primary">
+				<h5 class="text-center">Selected Sensor</h5>
+						<div class="row ml-2 mr-2">
 							<div class="col-12 mb-3 rounded border border-orange border-4">
 							<h6 class="text-left">Name: Sample Text</h6>
 							<h6 class="text-left">ID: 123456</h6>
@@ -149,8 +138,22 @@
 							</div>
 						</div>
 			</div>
+		</div>
 	</div>
-</div>
+	
+	<div class="row mb-2 ml-4 mr-4 rounded border border-primary">
+		<div class="col-4 border border-primary">
+		<h5 class="text-center">Current System</h5>
+		<select class="form-control mb-1" id="accountSelect">
+			<option value="user" selected>System 1</option>
+			<option value="monitor">System 2</option>
+			<option value="admin">System 3</option>
+		</select>
+			</div>
+		<div class="col border border-primary">
+			<h5 class="text-center">System Information</h5>
+		</div>
+	</div>
 		
    <script src="map.js"></script> 		
 	<script async defer
