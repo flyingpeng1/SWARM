@@ -20,11 +20,29 @@ function initialize() {
     // Multiple Markers
     var markers = [
         ['Somewhere, Washington', 38.964072,-76.992120],
-        ['Somewhere, Washington', 38.767719,-77.222838]
+        ['Somewhere, Washington', 38.367719,-77.222838],
+	['Somewhere, Washington', 38.264072,-74.992120],
+        ['Somewhere, Washington', 38.167719,-73.222838],
+	['Somewhere, Washington', 38.934072,-76.122120],
+        ['Somewhere, Washington', 38.267719,-77.432838]
     ];
                         
     // Info Window Content
     var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Sample Text</h3>' +
+        '<p>Put info here</p>' +        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Sample Text</h3>' +
+        '<p>Put info here.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Sample Text</h3>' +
+        '<p>Put info here</p>' +        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Sample Text</h3>' +
+        '<p>Put info here.</p>' +
+        '</div>'],
         ['<div class="info_content">' +
         '<h3>Sample Text</h3>' +
         '<p>Put info here</p>' +        '</div>'],
@@ -64,7 +82,7 @@ function initialize() {
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(10);
+        this.setZoom(5);
         google.maps.event.removeListener(boundsListener);
     });
     
