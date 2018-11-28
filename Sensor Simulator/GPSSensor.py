@@ -8,6 +8,7 @@ class PullGPSSensor(Sensor.PullSensor):
  
 	def __init__(self, sensorID, updateFrequency, startingLat, startingLong, startingAlt, latMultiplier=1, longMultiplier=1, altMultiplier=1):
 		Sensor.PullSensor.__init__(self, sensorID, updateFrequency)
+		self.type = "PullGPS"
 		self.updateFrequency = updateFrequency
 		self.lat = startingLat
 		self.long = startingLong
@@ -17,7 +18,18 @@ class PullGPSSensor(Sensor.PullSensor):
 		self.longMult = longMultiplier
 		self.bearing = 360.0
 		self.speed = 0
+		
+	def __str__(self):
+		string = "SID: " + str(self.simulID) + "\n"
+		string = string + " updateFrequency: " + str(self.updateFrequency)
+		string = string + " latMult: " + str(self.latMult)
+		string = string + " longMult: " + str(self.longMult)
+		string = string + " altMult: " + str(self.altMult)
+		return string
 	
+	def getData(self):
+		return self.latLongToBytes(self.lat, self.long, self.alt, self.bearing, self.speed)
+		
 	def newData(self):
 		deltaLat = float(random.randint(-100* self.latMult,100* self.latMult)) / 1000000
 		deltaLong = float(random.randint(-100 * self.longMult,100 * self.longMult)) / 1000000
@@ -103,6 +115,7 @@ class PushGPSSensor(Sensor.PushSensor):
  
 	def __init__(self, sensorID, updateFrequency, startingLat, startingLong, startingAlt, latMultiplier=1, longMultiplier=1, altMultiplier=1):
 		Sensor.PullSensor.__init__(self, sensorID, updateFrequency)
+		self.type = "PushGPS"
 		self.updateFrequency = updateFrequency
 		self.lat = startingLat
 		self.long = startingLong
@@ -112,6 +125,14 @@ class PushGPSSensor(Sensor.PushSensor):
 		self.longMult = longMultiplier
 		self.bearing = 360.0
 		self.speed = 0
+		
+	def __str__(self):
+		string = "SID: " + str(self.simulID) + "\n"
+		string = string + " updateFrequency: " + str(self.updateFrequency)
+		string = string + " latMult: " + str(self.latMult)
+		string = string + " longMult: " + str(self.longMult)
+		string = string + " altMult: " + str(self.altMult)
+		return string
 	
 	def newData(self):
 		deltaLat = float(random.randint(-100* self.latMult,100* self.latMult)) / 1000000
@@ -194,9 +215,9 @@ class PushGPSSensor(Sensor.PushSensor):
 		
 		return bytearray(latArray + longArray + altArray + berArray + speArray)
   
-def cb(data):
-	print(str(data))
+#def cb(data):
+#	print(str(data))
 	
 #(39.267650, -76.798905)
-s = PushGPSSensor(123, .5, 39.267650, -76.798905, 1)
-s.start(cb)
+#s = PushGPSSensor(123, .5, 39.267650, -76.798905, 1)
+#s.start(cb)
