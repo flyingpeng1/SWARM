@@ -1,9 +1,13 @@
 import datetime
-import GPSSensor
 import random
 import threading
 import time
 
+import GPSSensor
+
+#------------------------------------------------------------------------
+#Asynchronously pulls data from pull sensor threads and calls a callback.
+#------------------------------------------------------------------------
 class PullThread:
 
 	def __init__(self, UID, sensor):

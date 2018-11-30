@@ -1,20 +1,24 @@
-
-import GPSSensor
 import random
-import User
 import time
-import SPFJSONFactory
 import json
-import SensorConfigurator
 
+import User
+import SPFJSONFactory
+import SensorConfigurator
+import PubSubMessenger
+
+#--------------------------
+#Controls sensor simulator.
+#--------------------------
 class SensorMain:
 
-	def __init__(self, config):
-		with open(config) as f:
+	def __init__(self, sensorConfig, sysConfig):
+		with open(sensorConfig) as f:
 			self.config = json.load(f)
-		self.configurator = SensorConfigurator.SensorConfigurator(config)
+		self.configurator = SensorConfigurator.SensorConfigurator(sensorConfig)
 		self.users = []
 		self.jsonFactory = SPFJSONFactory.SPFJsonFactory()
+		self.Messenger = PubSubMessenger.PubSubMessenger(sysConfig)
 		self.setup()
 		
 	#-----------------------------------------
@@ -59,13 +63,12 @@ class SensorMain:
 	#---------------------------------------
 	def callback(self, data, type, SID, UID):
 		dict = self.jsonFactory.createSPFDictionary(UID, type, data)
-		#TODO: send to redis queue
-		print(self.jsonFactory.createJSONString(dict))
+		self.transmit(self.jsonFactory.createJSONString(dict))
 	
-s = SensorMain('SensorConfig.json')
+s = SensorMain('SensorConfig.json', 'SystemConfig.json')
 s.startSimulator()
-time.sleep(1000)
-print('Ended')
+time.sleep(10)
 s.stopSimulator()
+print('Ended')
 
 			

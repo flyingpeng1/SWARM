@@ -1,11 +1,13 @@
-
-import GPSSensor
-import HeartRateSensor
-
 import random
 import time
 import json
 
+import GPSSensor
+import HeartRateSensor
+
+#-------------------------------------------------------------
+#Automatically creates and configures sensor objects.
+#-------------------------------------------------------------
 class SensorConfigurator:
 
 	def __init__(self, config):
@@ -37,13 +39,11 @@ class SensorConfigurator:
 			BPMMult = random.randint(1,3)
 		else:
 			BPMMult = int(self.config["BPMMult"])
-			
 		if (self.tf[self.config["RandomizeStartBPM"]]):
 			BPM = random.randint(0,250)
 		else:
 			BPM = int(self.config["startBPM"])
-			
-		return HeartRateSensor.HeartRateMonitor(self.id, self.delay, BPM, BPMMult)
+		return HeartRateSensor.PullHeartRateMonitor(self.id, self.delay, BPM, BPMMult)
 		
 	#-------------------------------------
 	#Sets up sensor with configured values.
@@ -54,32 +54,26 @@ class SensorConfigurator:
 			deltaLongMult = random.randint(1, 10)
 		else:
 			deltaLongMult = int(self.config["deltaLong"])
-			
 		if (self.tf[self.config["randomizeDeltaLatMult"]]):
 			deltaLatMult = random.randint(1, 10)
 		else:
 			deltaLatMult = int(self.config["deltaLat"])
-			
 		if (self.tf[self.config["randomizeDeltaAltMult"]]):
 			deltaAltMult = random.randint(1, 10)
 		else:
 			deltaAltMult = int(self.config["deltaAlt"])
-			
 		if (self.tf[self.config["randomizeStartLat"]]):
 			startLat = float(self.config["startLat"] + str(random.randint(0,999999)))
 		else:
 			startLat = float(self.config["startLat"])
-			
 		if (self.tf[self.config["randomizeStartLong"]]):
 			startLong = float(self.config["startLong"] + str(random.randint(0,999999)))
 		else:
 			startLong = float(self.config["startLong"])
-			
 		if (self.tf[self.config["randomizeStartAlt"]]):
 			startAlt = float(random.randint(0, 1000))
 		else:
 			startAlt = float(self.config["startAlt"])
-			
 		return GPSSensor.PullGPSSensor(self.id, self.delay, startLat, startLong, startAlt, deltaLatMult, deltaLongMult, deltaAltMult)
 
 	#-------------------------------------
@@ -91,31 +85,25 @@ class SensorConfigurator:
 			deltaLongMult = random.randint(1, 10)
 		else:
 			deltaLongMult = int(self.config["deltaLong"])
-			
 		if (self.tf[self.config["randomizeDeltaLatMult"]]):
 			deltaLatMult = random.randint(1, 10)
 		else:
 			deltaLatMult = int(self.config["deltaLat"])
-			
 		if (self.tf[self.config["randomizeDeltaAltMult"]]):
 			deltaAltMult = random.randint(1, 10)
 		else:
 			deltaAltMult = int(self.config["deltaAlt"])
-			
 		if (self.tf[self.config["randomizeStartLat"]]):
 			startLat = float(self.config["startLat"] + str(random.randint(0,999999)))
 		else:
 			startLat = float(self.config["startLat"])
-			
 		if (self.tf[self.config["randomizeStartLong"]]):
 			startLong = float(self.config["startLong"] + str(random.randint(0,999999)))
 		else:
 			startLong = float(self.config["startLong"])
-			
 		if (self.tf[self.config["randomizeStartAlt"]]):
 			startAlt = float(random.randint(0, 1000))
 		else:
 			startAlt = float(self.config["startAlt"])
-			
 		return GPSSensor.PushGPSSensor(self.id, self.delay, startLat, startLong, startAlt, deltaLatMult, deltaLongMult, deltaAltMult)
 			

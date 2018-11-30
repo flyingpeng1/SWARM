@@ -1,9 +1,13 @@
 import datetime
-import GPSSensor
 import random
 import threading
+
+import GPSSensor
 import PullThread
 
+#-------------------------------------------------------------
+#Represents a user and/or device which has sensors associated.
+#-------------------------------------------------------------
 class User:
 
 	def __init__(self, UID):

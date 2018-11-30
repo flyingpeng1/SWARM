@@ -2,6 +2,9 @@ import json
 import time
 import base64
 
+#-------------------------------------------------------------
+#Creates Json files for sending to pub/sub.
+#-------------------------------------------------------------
 class SPFJsonFactory:
     
 	def __init__(self, indent=4, logDir=""):
@@ -43,9 +46,3 @@ class SPFJsonFactory:
 	#---------------------------------------
 	def getCurrentTime(self):
 		return time.time()
-	   
-
-#f = SPFJsonFactory()
-#ba = bytearray([1, 23, 5, 34, 12])
-#dict = f.createSPFDictionary('1234', 'SimGPS', ba)
-#print(f.createJSONString(dict))
