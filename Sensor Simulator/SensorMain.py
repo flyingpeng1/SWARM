@@ -63,11 +63,11 @@ class SensorMain:
 	#---------------------------------------
 	def callback(self, data, type, SID, UID):
 		dict = self.jsonFactory.createSPFDictionary(UID, type, data)
-		self.transmit(self.jsonFactory.createJSONString(dict))
+		self.Messenger.transmit(self.jsonFactory.createJSONString(dict))
 	
 s = SensorMain('SensorConfig.json', 'SystemConfig.json')
 s.startSimulator()
-time.sleep(10)
+input("Press ENTER to stop simulation...")
 s.stopSimulator()
 print('Ended')
 

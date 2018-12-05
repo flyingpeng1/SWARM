@@ -1,0 +1,7 @@
+---
+- name: zookeeper
+  dir: docker/zookeeper
+- name: kafka
+  dir: docker/kafka
+- name: kafka-manager
+  dir: docker/kafka-manager

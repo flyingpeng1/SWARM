@@ -1,6 +1,6 @@
 {
 	"__comment__":"number of users to be simulated",
-    "Numusers": "100",
+    "Numusers": "10",
 	
 	"__comment__":"Sensors per user config: SensorType should have max # of sensors in array",
 	"NumSensorsMin": "1",

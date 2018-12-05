@@ -25,7 +25,7 @@ class PubSubMessenger:
 		ack = self.config["acks"]
 		if (len(ack) == 1):
 			ack = int(ack)
-		print("Connecting to Kafka...")
+		print("Attempting to connect to Kafka...")
 		from kafka import KafkaProducer
 		self.KafkaProducer = KafkaProducer(
 		bootstrap_servers=self.config["bootstrap_servers"],
@@ -33,12 +33,17 @@ class PubSubMessenger:
 		acks=ack,
 		value_serializer=lambda v: v.encode('utf-8')
 		)
-		print("connected to Kafka at " + str(self.config["bootstrap_servers"]))
+		print("connected")
 		
 	
 	def kafkaTransmit(self, SPFJsonPayload):
 		self.KafkaProducer.send(self.config["topicName"], SPFJsonPayload)
-			
+
+
+transmitter = PubSubMessenger("SystemConfig.json")
+transmitter.transmit(json.dumps({"Test":"test"}));
+
+
 		
 	
 			
