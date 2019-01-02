@@ -1,5 +1,4 @@
-FROM alpine
-RUN apk update && apk add python3 && apk add py-pip
+FROM python:3.7.1-alpine3.8
 RUN pip install kafka-python
 COPY . /app
 WORKDIR /app

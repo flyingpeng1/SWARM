@@ -3,7 +3,7 @@
 	"retries": "0",
     "acks": "0",
 	"bootstrap_servers":[
-		"192.168.34.181:9092"
+		"10.44.0.7:9093"
 	],
 	"topicName":"SWARMUserSensorData",
 	

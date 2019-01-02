@@ -4,7 +4,7 @@
 	
 	"__comment__":"Sensors per user config: SensorType should have max # of sensors in array",
 	"NumSensorsMin": "1",
-    "NumSensorsMax": "3",
+    "NumSensorsMax": "1",
 	"SensorTypes":[
 		"PushGPS", "PullGPS", "PullHeartRateMonitor"
 	],

@@ -25,6 +25,7 @@ class PullGPSSensor(Sensor.PullSensor):
 		
 	def __str__(self):
 		string = "SID: " + str(self.simulID) + "\n"
+		string = string + " type: " + str(self.type)
 		string = string + " updateFrequency: " + str(self.updateFrequency)
 		string = string + " latMult: " + str(self.latMult)
 		string = string + " longMult: " + str(self.longMult)
@@ -127,6 +128,7 @@ class PushGPSSensor(Sensor.PushSensor):
 		
 	def __str__(self):
 		string = "SID: " + str(self.simulID) + "\n"
+		string = string + " type: " + str(self.type)
 		string = string + " updateFrequency: " + str(self.updateFrequency)
 		string = string + " latMult: " + str(self.latMult)
 		string = string + " longMult: " + str(self.longMult)

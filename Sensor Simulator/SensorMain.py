@@ -1,6 +1,7 @@
 import random
 import time
 import json
+import logging
 
 import User
 import SPFJSONFactory
@@ -13,6 +14,13 @@ import PubSubMessenger
 class SensorMain:
 
 	def __init__(self, sensorConfig, sysConfig):
+		self.logger = logging.getLogger('SWARM_Simulator')
+		self.logger.setLevel(logging.INFO)
+		fh = logging.FileHandler('logs/sim' + str(time.time()) + '.log')
+		formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+		fh.setFormatter(formatter)
+		self.logger.addHandler(fh)
+		
 		with open(sensorConfig) as f:
 			self.config = json.load(f)
 		self.configurator = SensorConfigurator.SensorConfigurator(sensorConfig)
@@ -37,6 +45,7 @@ class SensorMain:
 				sensorName = sensorTypes.pop()
 				user.addSensor(self.configurator.sensorObjFromString(sensorName, 100 + i))
 			self.users.append(user)
+			self.logger.info(user)
 	
 	#---------------------------------------
 	#Begins running the simulation
@@ -67,6 +76,7 @@ class SensorMain:
 	
 s = SensorMain('SensorConfig.json', 'SystemConfig.json')
 s.startSimulator()
+print("Sensors started.")
 input("Press ENTER to stop simulation...")
 s.stopSimulator()
 print('Ended')

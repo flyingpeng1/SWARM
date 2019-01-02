@@ -11,14 +11,17 @@ class PullHeartRateMonitor(Sensor.PullSensor):
  
 	def __init__(self, sensorID, updateFrequency, startingBPM, rateMultiplier=1):
 		Sensor.PullSensor.__init__(self, sensorID, updateFrequency)
+		self.updateFrequency = updateFrequency
 		self.type = "PullHeartRateMonitor"
 		self.bpm = startingBPM
 		self.rateMult = rateMultiplier
 		
 	def __str__(self):
 		string = "SID: " + str(self.simulID) + "\n"
+		string = string + " type: " + str(self.type)
 		string = string + " updateFrequency: " + str(self.updateFrequency)
-		string = string + " rateMult: " + str(rateMultiplier.bpm)
+		string = string + " rateMult: " + str(self.rateMult)
+		string = string + " bpm: " + str(self.bpm)
 		return string
 	
 	#----------------------------------

@@ -1,6 +1,7 @@
 import datetime
 import random
 import threading
+import logging
 
 import GPSSensor
 import PullThread
@@ -14,6 +15,7 @@ class User:
 		self.UID = UID
 		self.sensors = []
 		self.pullThreads = []
+		self.logger = logging.getLogger('SWARM_Simulator')
 
 	def __str__(self):
 		string = ""
@@ -38,7 +40,7 @@ class User:
 				sensor.start()
 			elif ("Push" in sensor.type):
 				sensor.start(self.userCallback)
-				print("started sensor")
+			self.logger.info("started sensor " + str(sensor) + " for " + str(self))
 	
 	#-----------------------------------
 	#Intermediate callback to add UID.
