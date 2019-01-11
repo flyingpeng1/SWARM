@@ -1,0 +1,1258 @@
+2019-01-11 15:24:55,004 - SWARM_Simulator - INFO - Connecting to Kafka...
+2019-01-11 15:24:55,217 - SWARM_Simulator - INFO - connected to Kafka at ['192.168.34.181:9092']
+2019-01-11 15:24:55,217 - SWARM_Simulator - INFO - UID: 1000
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 9 longMult: 9 altMult: 7
+
+2019-01-11 15:24:55,217 - SWARM_Simulator - INFO - UID: 1001
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 161
+
+2019-01-11 15:24:55,217 - SWARM_Simulator - INFO - UID: 1002
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 3 bpm: 205
+
+2019-01-11 15:24:55,218 - SWARM_Simulator - INFO - UID: 1003
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 10 longMult: 1 altMult: 1
+
+2019-01-11 15:24:55,218 - SWARM_Simulator - INFO - UID: 1004
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 138
+
+2019-01-11 15:24:55,218 - SWARM_Simulator - INFO - UID: 1005
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 5 longMult: 4 altMult: 1
+
+2019-01-11 15:24:55,218 - SWARM_Simulator - INFO - UID: 1006
+Sensors: 
+ SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 1 longMult: 8 altMult: 7
+
+2019-01-11 15:24:55,219 - SWARM_Simulator - INFO - UID: 1007
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 130
+
+2019-01-11 15:24:55,219 - SWARM_Simulator - INFO - UID: 1008
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 1 bpm: 216
+
+2019-01-11 15:24:55,219 - SWARM_Simulator - INFO - UID: 1009
+Sensors: 
+ SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 3 longMult: 4 altMult: 8
+
+2019-01-11 15:24:55,219 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 9 longMult: 9 altMult: 7 for UID: 1000
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 9 longMult: 9 altMult: 7
+
+2019-01-11 15:24:55,980 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 161.0 for UID: 1001
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 161.0
+
+2019-01-11 15:24:56,550 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 3 bpm: 201.0 for UID: 1002
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 3 bpm: 201.0
+
+2019-01-11 15:24:57,091 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 10 longMult: 1 altMult: 1 for UID: 1003
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 10 longMult: 1 altMult: 1
+
+2019-01-11 15:24:57,382 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 144.0 for UID: 1004
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 144.0
+
+2019-01-11 15:24:57,682 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 5 longMult: 4 altMult: 1 for UID: 1005
+Sensors: 
+ SID: 100
+ type: PullGPS updateFrequency: 5.0 latMult: 5 longMult: 4 altMult: 1
+
+2019-01-11 15:24:58,343 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 1 longMult: 8 altMult: 7 for UID: 1006
+Sensors: 
+ SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 1 longMult: 8 altMult: 7
+
+2019-01-11 15:24:58,344 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238298.3431695",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0c7\\x00L\\x15E:\\x00\\x00\\x00\\xfa\\x00\\xff\\x00\\x00\\x00\\x02\")"
+}
+2019-01-11 15:24:59,334 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 134.0 for UID: 1007
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 2 bpm: 134.0
+
+2019-01-11 15:24:59,535 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 1 bpm: 219.0 for UID: 1008
+Sensors: 
+ SID: 100
+ type: PullHeartRateMonitor updateFrequency: 5.0 rateMult: 1 bpm: 219.0
+
+2019-01-11 15:25:00,216 - SWARM_Simulator - INFO - started sensor SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 3 longMult: 4 altMult: 8 for UID: 1009
+Sensors: 
+ SID: 100
+ type: PushGPS updateFrequency: 5.0 latMult: 3 longMult: 4 altMult: 8
+
+2019-01-11 15:25:00,216 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238300.2161539",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>6\\x14\\x00L(\\x06\\x10\\x00\\x00\\x02\\x91\\x01W\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:25:00,788 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238300.7876859",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f$[\\x00L+*,\\x00\\x00\\x02n\\x00\\xd8\\x00\\x00\\x00\\x13\")"
+}
+2019-01-11 15:25:00,790 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238300.7891893",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238300.7891893, \"BPM\": 161.0}"
+}
+2019-01-11 15:25:00,790 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238300.7901907",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238300.7901907, \"BPM\": 201.0}"
+}
+2019-01-11 15:25:00,791 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238300.7911916",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XL;\\x00L\\x1c\\x16X\\x00\\x00\\x03,\\x00\\xe2\\x00\\x00\\x00\\x01\")"
+}
+2019-01-11 15:25:00,793 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238300.7921925",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238300.7921925, \"BPM\": 144.0}"
+}
+2019-01-11 15:25:00,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238300.7936914",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e+c\\x00LP\\x1e\\x19\\x00\\x00\\x02B\\x00\\xd5\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:25:00,795 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238300.7951941",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238300.7951941, \"BPM\": 134.0}"
+}
+2019-01-11 15:25:00,797 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238300.7961934",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238300.7961934, \"BPM\": 219.0}"
+}
+2019-01-11 15:25:03,345 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238303.3449316",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0c\\x1e\\x00L\\x15C\\x04\\x00\\x00\\x00\\xf2\\x01I\\x00\\x00\\x00\\x05\")"
+}
+2019-01-11 15:25:05,218 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238305.2180576",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>8c\\x00L(\\x04P\\x00\\x00\\x02\\x94\\x00z\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:05,789 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238305.7896507",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f+\\r\\x00L+$\\x14\\x00\\x00\\x02W\\x00;\\x00\\x00\\x00\\x13\")"
+}
+2019-01-11 15:25:05,791 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238305.791146",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238305.791146, \"BPM\": 167.0}"
+}
+2019-01-11 15:25:05,791 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238305.791647",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XL0\\x00L\\x1c\\x166\\x00\\x00\\x03,\\x00U\\x00\\x00\\x00\\x00\")"
+}
+2019-01-11 15:25:05,791 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238305.791647",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238305.791647, \"BPM\": 198.0}"
+}
+2019-01-11 15:25:05,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238305.7946537",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238305.7946537, \"BPM\": 147.0}"
+}
+2019-01-11 15:25:05,796 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238305.7956493",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e*<\\x00LP\\x1b=\\x00\\x00\\x02E\\x00\\xd5\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:05,797 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238305.7976556",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238305.7976556, \"BPM\": 138.0}"
+}
+2019-01-11 15:25:05,798 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238305.7981493",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238305.7981493, \"BPM\": 220.0}"
+}
+2019-01-11 15:25:08,347 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238308.346235",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0c\\x1b\\x00L\\x15=\\\\\\x00\\x00\\x00\\xf4\\x00<\\x00\\x00\\x00\\x0b\")"
+}
+2019-01-11 15:25:10,219 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238310.2193696",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9\\\\\\x00L(\\x06/\\x00\\x00\\x02\\x81\\x00\\xf7\\x00\\x00\\x00\\x04\")"
+}
+2019-01-11 15:25:10,790 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238310.7909956",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f+;\\x00L+#\\\\\\x00\\x00\\x024\\x00\\x9a\\x00\\x00\\x00\\x01\")"
+}
+2019-01-11 15:25:10,793 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238310.792",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238310.792, \"BPM\": 167.0}"
+}
+2019-01-11 15:25:10,793 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238310.7935004",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238310.7935004, \"BPM\": 203.0}"
+}
+2019-01-11 15:25:10,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238310.7930005",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XOI\\x00L\\x1c\\x17\\x1e\\x00\\x00\\x03*\\x00u\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:25:10,796 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238310.796002",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238310.796002, \"BPM\": 152.0}"
+}
+2019-01-11 15:25:10,797 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238310.7970035",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e+\\x03\\x00LP\\x1d0\\x00\\x00\\x02J\\x00\\x9b\\x00\\x00\\x00\\x04\")"
+}
+2019-01-11 15:25:10,798 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238310.7985036",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238310.7985036, \"BPM\": 133.0}"
+}
+2019-01-11 15:25:10,799 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238310.7985036",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238310.7985036, \"BPM\": 221.0}"
+}
+2019-01-11 15:25:13,347 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238313.347674",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0bU\\x00L\\x15DY\\x00\\x00\\x00\\xd5\\x00\\xf9\\x00\\x00\\x00\\x0f\")"
+}
+2019-01-11 15:25:15,221 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238315.2210066",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>;^\\x00L(\\n\\x10\\x00\\x00\\x02\\x94\\x00+\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:25:15,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238315.7943432",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238315.793847, \"BPM\": 161.0}"
+}
+2019-01-11 15:25:15,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238315.7943432",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f+^\\x00L+\\x1d*\\x00\\x00\\x02J\\x01F\\x00\\x00\\x00\\x0e\")"
+}
+2019-01-11 15:25:15,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238315.794844",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XG\\t\\x00L\\x1c\\x17@\\x00\\x00\\x03(\\x00S\\x00\\x00\\x00\\x13\")"
+}
+2019-01-11 15:25:15,794 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238315.793847",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238315.793847, \"BPM\": 201.0}"
+}
+2019-01-11 15:25:15,796 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238315.7968447",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238315.7968447, \"BPM\": 153.0}"
+}
+2019-01-11 15:25:15,798 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238315.7983458",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e+D\\x00LP\\x1c@\\x00\\x00\\x02L\\x01T\\x00\\x00\\x00\\x02\")"
+}
+2019-01-11 15:25:15,800 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238315.8003511",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238315.8003511, \"BPM\": 224.0}"
+}
+2019-01-11 15:25:15,800 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238315.8003511",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238315.8003511, \"BPM\": 129.0}"
+}
+2019-01-11 15:25:18,349 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238318.3494911",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0bX\\x00L\\x15B;\\x00\\x00\\x00\\xf1\\x01\\x06\\x00\\x00\\x00\\x05\")"
+}
+2019-01-11 15:25:20,222 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238320.2224915",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9\\x12\\x00L(\\n1\\x00\\x00\\x02w\\x01a\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:20,796 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238320.7956364",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f&#\\x00L+!:\\x00\\x00\\x02M\\x01g\\x00\\x00\\x00\\x0f\")"
+}
+2019-01-11 15:25:20,796 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238320.7956364",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238320.7956364, \"BPM\": 157.0}"
+}
+2019-01-11 15:25:20,797 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238320.7971332",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238320.7971332, \"BPM\": 202.0}"
+}
+2019-01-11 15:25:20,799 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238320.7971332",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XN\\x1f\\x00L\\x1c\\x17_\\x00\\x00\\x03)\\x01,\\x00\\x00\\x00\\x10\")"
+}
+2019-01-11 15:25:20,800 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238320.7986321",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238320.7986321, \"BPM\": 154.0}"
+}
+2019-01-11 15:25:20,801 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238320.7996337",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e(1\\x00LP .\\x00\\x00\\x02M\\x00\\x8c\\x00\\x00\\x00\\x0b\")"
+}
+2019-01-11 15:25:20,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238320.802207",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238320.802207, \"BPM\": 124.0}"
+}
+2019-01-11 15:25:20,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238320.802207",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238320.802207, \"BPM\": 222.0}"
+}
+2019-01-11 15:25:23,350 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238323.3508875",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0c\\x06\\x00L\\x15H\\x0b\\x00\\x00\\x01\\x03\\x00\\xac\\x00\\x00\\x00\\x0c\")"
+}
+2019-01-11 15:25:25,224 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238325.2240021",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9>\\x00L(\\n\\x1a\\x00\\x00\\x02\\x94\\x00\\x8c\\x00\\x00\\x00\\x01\")"
+}
+2019-01-11 15:25:25,798 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238325.797834",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f&B\\x00L+)J\\x00\\x00\\x02T\\x01\\x0f\\x00\\x00\\x00\\x12\")"
+}
+2019-01-11 15:25:25,800 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238325.8006926",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238325.8006926, \"BPM\": 156.0}"
+}
+2019-01-11 15:25:25,801 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238325.80167",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XQ\\x07\\x00L\\x1c\\x171\\x00\\x00\\x03%\\x01b\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:25,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238325.80167",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238325.80167, \"BPM\": 202.0}"
+}
+2019-01-11 15:25:25,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238325.802172",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e&7\\x00LP\\x1e\\x1c\\x00\\x00\\x02L\\x01/\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:25,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238325.8026705",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238325.8026705, \"BPM\": 159.0}"
+}
+2019-01-11 15:25:25,804 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238325.8041735",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238325.8041735, \"BPM\": 125.0}"
+}
+2019-01-11 15:25:25,805 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238325.8041735",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238325.8041735, \"BPM\": 225.0}"
+}
+2019-01-11 15:25:28,353 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238328.3525064",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0c#\\x00L\\x15CN\\x00\\x00\\x00\\xfb\\x01\\x14\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:25:30,226 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238330.225465",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9\\r\\x00L(\\x0c\\x06\\x00\\x00\\x02\\xab\\x00_\\x00\\x00\\x00\\x04\")"
+}
+2019-01-11 15:25:30,799 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238330.7991412",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f!>\\x00L+#\\x15\\x00\\x00\\x02A\\x012\\x00\\x00\\x00\\x12\")"
+}
+2019-01-11 15:25:30,801 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238330.8016508",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238330.8016508, \"BPM\": 159.0}"
+}
+2019-01-11 15:25:30,803 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238330.802647",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238330.802647, \"BPM\": 207.0}"
+}
+2019-01-11 15:25:30,804 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238330.8043087",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e* \\x00LP\\x1cR\\x00\\x00\\x02K\\x00\\xd2\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:25:30,804 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238330.802647",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XY\\x00\\x00L\\x1c\\x17N\\x00\\x00\\x03)\\x00X\\x00\\x00\\x00\\x11\")"
+}
+2019-01-11 15:25:30,805 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238330.803648",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238330.803648, \"BPM\": 163.0}"
+}
+2019-01-11 15:25:30,806 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238330.8058116",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238330.8058116, \"BPM\": 124.0}"
+}
+2019-01-11 15:25:30,807 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238330.806814",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238330.806814, \"BPM\": 223.0}"
+}
+2019-01-11 15:25:33,354 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238333.3543274",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b[\\x00L\\x15=\\x13\\x00\\x00\\x00\\xe5\\x00\\xc9\\x00\\x00\\x00\\x0e\")"
+}
+2019-01-11 15:25:35,227 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238335.227638",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>:5\\x00L(\\x0f\\r\\x00\\x00\\x02\\xc3\\x00-\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:25:35,800 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238335.8009434",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f$@\\x00L+\\x1f\\\\\\x00\\x00\\x02S\\x00\\x17\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:25:35,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238335.8029478",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238335.8029478, \"BPM\": 159.0}"
+}
+2019-01-11 15:25:35,805 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238335.8039496",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238335.8039496, \"BPM\": 210.0}"
+}
+2019-01-11 15:25:35,805 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238335.8049476",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e)X\\x00LP\\x1bE\\x00\\x00\\x02F\\x00z\\x00\\x00\\x00\\x02\")"
+}
+2019-01-11 15:25:35,806 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238335.8069508",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Xb^\\x00L\\x1c\\x17:\\x00\\x00\\x03(\\x00;\\x00\\x00\\x00\\x16\")"
+}
+2019-01-11 15:25:35,808 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238335.8084517",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238335.8084517, \"BPM\": 221.0}"
+}
+2019-01-11 15:25:35,808 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238335.8089595",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238335.8089595, \"BPM\": 119.0}"
+}
+2019-01-11 15:25:35,809 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238335.8099513",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238335.8099513, \"BPM\": 161.0}"
+}
+2019-01-11 15:25:38,356 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238338.355718",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b3\\x00L\\x15=\\x01\\x00\\x00\\x00\\xd5\\x00g\\x00\\x00\\x00\\x00\")"
+}
+2019-01-11 15:25:40,229 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238340.2290277",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9\\\\\\x00L(\\x0c/\\x00\\x00\\x02\\xd2\\x00\\xd4\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:40,802 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238340.8021996",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f)!\\x00L+!\\x0b\\x00\\x00\\x02J\\x01\\x02\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:25:40,806 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238340.8052108",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238340.8052108, \"BPM\": 163.0}"
+}
+2019-01-11 15:25:40,807 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238340.8062074",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238340.8062074, \"BPM\": 205.0}"
+}
+2019-01-11 15:25:40,809 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238340.8072085",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\'D\\x00LP\\x1d)\\x00\\x00\\x02A\\x00\\xc1\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:40,809 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238340.808209",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'XcA\\x00L\\x1c\\x17D\\x00\\x00\\x03-\\x01M\\x00\\x00\\x00\\x01\")"
+}
+2019-01-11 15:25:40,810 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238340.8102136",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238340.8102136, \"BPM\": 125.0}"
+}
+2019-01-11 15:25:40,811 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238340.8092105",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238340.8092105, \"BPM\": 221.0}"
+}
+2019-01-11 15:25:40,811 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238340.8112087",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238340.8112087, \"BPM\": 166.0}"
+}
+2019-01-11 15:25:43,357 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238343.357411",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b\\x16\\x00L\\x15D:\\x00\\x00\\x00\\xf8\\x00K\\x00\\x00\\x00\\x10\")"
+}
+2019-01-11 15:25:45,231 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238345.2306974",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b'\\x02\\'><\"\\x00L(\\t2\\x00\\x00\\x02\\xdf\\x00\\x94\\x00\\x00\\x00\\x08')"
+}
+2019-01-11 15:25:45,803 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238345.8036",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f/O\\x00L+\\x1aY\\x00\\x00\\x02I\\x01\\x12\\x00\\x00\\x00\\x13\")"
+}
+2019-01-11 15:25:45,808 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238345.8081148",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238345.8081148, \"BPM\": 169.0}"
+}
+2019-01-11 15:25:45,809 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238345.8091116",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238345.8091116, \"BPM\": 208.0}"
+}
+2019-01-11 15:25:45,810 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238345.8101108",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e$\\x19\\x00LP\\x1a\\x1d\\x00\\x00\\x02C\\x00\\xe9\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:25:45,810 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238345.8106112",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x040\\x00L\\x1c\\x17Q\\x00\\x00\\x03)\\x01\\x0c\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:25:45,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238345.8121123",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238345.8116121, \"BPM\": 220.0}"
+}
+2019-01-11 15:25:45,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238345.8121123",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238345.8121123, \"BPM\": 164.0}"
+}
+2019-01-11 15:25:45,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238345.8116121",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238345.8116121, \"BPM\": 129.0}"
+}
+2019-01-11 15:25:48,358 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238348.3588514",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0bK\\x00L\\x15I(\\x00\\x00\\x01\\r\\x00\\x1f\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:25:50,232 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238350.232345",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9Y\\x00L(\\x07B\\x00\\x00\\x02\\xfb\\x00*\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:25:50,806 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238350.8051555",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f,+\\x00L+\\x18\\x15\\x00\\x00\\x02G\\x00\\t\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:25:50,808 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238350.808681",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238350.808681, \"BPM\": 174.0}"
+}
+2019-01-11 15:25:50,810 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238350.8096871",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238350.8096871, \"BPM\": 205.0}"
+}
+2019-01-11 15:25:50,811 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238350.8111875",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e(^\\x00LP\\x1b\\\\\\x00\\x00\\x02C\\x00\\x06\\x00\\x00\\x00\\x0b\")"
+}
+2019-01-11 15:25:50,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238350.8111875",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x0cC\\x00L\\x1c\\x17\\x02\\x00\\x00\\x03*\\x00\\xf4\\x00\\x00\\x00\\x12\")"
+}
+2019-01-11 15:25:50,813 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238350.8128636",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238350.8128636, \"BPM\": 170.0}"
+}
+2019-01-11 15:25:50,813 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238350.8128636",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238350.8128636, \"BPM\": 223.0}"
+}
+2019-01-11 15:25:50,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238350.8143654",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238350.8138654, \"BPM\": 131.0}"
+}
+2019-01-11 15:25:53,360 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238353.3603072",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b\\x0e\\x00L\\x15B%\\x00\\x00\\x01\\x0f\\x00\\x8b\\x00\\x00\\x00\\x0f\")"
+}
+2019-01-11 15:25:55,233 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238355.233737",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>7?\\x00L(\\x0b\\x1b\\x00\\x00\\x02\\xfb\\x00u\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:25:55,807 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238355.8075943",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f1\\n\\x00L+\\x13\\x0c\\x00\\x00\\x02D\\x01d\\x00\\x00\\x00\\x0f\")"
+}
+2019-01-11 15:25:55,811 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238355.8111856",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238355.8111856, \"BPM\": 198.0}"
+}
+2019-01-11 15:25:55,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238355.8111856",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238355.8111856, \"BPM\": 176.0}"
+}
+2019-01-11 15:25:55,814 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238355.8121905",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e,\\x14\\x00LP\\x1e\\x18\\x00\\x00\\x02>\\x00C\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:25:55,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238355.8151913",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238355.8151913, \"BPM\": 167.0}"
+}
+2019-01-11 15:25:55,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238355.8136911",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x14T\\x00L\\x1c\\x17\\x14\\x00\\x00\\x03+\\x01\\n\\x00\\x00\\x00\\x12\")"
+}
+2019-01-11 15:25:55,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238355.814692",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238355.814692, \"BPM\": 220.0}"
+}
+2019-01-11 15:25:55,817 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238355.816191",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238355.816191, \"BPM\": 131.0}"
+}
+2019-01-11 15:25:58,362 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238358.3623824",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\nD\\x00L\\x15H\\x05\\x00\\x00\\x01\\x1f\\x00\\x8f\\x00\\x00\\x00\\x0c\")"
+}
+2019-01-11 15:26:00,235 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238360.2352746",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>4M\\x00L(\\r(\\x00\\x00\\x02\\xef\\x00\\x80\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:26:00,808 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238360.808936",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f1\\r\\x00L+\\x11K\\x00\\x00\\x02J\\x00\\xb0\\x00\\x00\\x00\\x03\")"
+}
+2019-01-11 15:26:00,811 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238360.8119342",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238360.8119342, \"BPM\": 198.0}"
+}
+2019-01-11 15:26:00,813 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238360.8134348",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238360.8134348, \"BPM\": 182.0}"
+}
+2019-01-11 15:26:00,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238360.815441",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e.\\x1c\\x00LP\\x1fB\\x00\\x00\\x02C\\x00\\xe8\\x00\\x00\\x00\\x05\")"
+}
+2019-01-11 15:26:00,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238360.815937",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238360.815937, \"BPM\": 172.0}"
+}
+2019-01-11 15:26:00,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238360.816937",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x1a4\\x00L\\x1c\\x17,\\x00\\x00\\x03*\\x01e\\x00\\x00\\x00\\x0c\")"
+}
+2019-01-11 15:26:00,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238360.817938",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238360.817938, \"BPM\": 222.0}"
+}
+2019-01-11 15:26:00,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238360.818939",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238360.818939, \"BPM\": 131.0}"
+}
+2019-01-11 15:26:03,364 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238363.3641136",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\n?\\x00L\\x15A\\x0f\\x00\\x00\\x01\\x04\\x01\\x1b\\x00\\x00\\x00\\x0f\")"
+}
+2019-01-11 15:26:05,236 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238365.2365737",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>6D\\x00L(\\x0eO\\x00\\x00\\x02\\xda\\x00\\x89\\x00\\x00\\x00\\x05\")"
+}
+2019-01-11 15:26:05,810 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238365.810363",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f1%\\x00L+\\x15\\n\\x00\\x00\\x02S\\x018\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:26:05,813 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238365.8133771",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238365.8133771, \"BPM\": 192.0}"
+}
+2019-01-11 15:26:05,814 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238365.814373",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238365.814373, \"BPM\": 178.0}"
+}
+2019-01-11 15:26:05,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238365.8163748",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e0N\\x00LP\\x1c`\\x00\\x00\\x02G\\x00\\xbd\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:26:05,817 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238365.8163748",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238365.8163748, \"BPM\": 176.0}"
+}
+2019-01-11 15:26:05,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238365.8173735",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x15^\\x00L\\x1c\\x17R\\x00\\x00\\x03/\\x00\\xd0\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:26:05,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238365.8188765",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238365.8188765, \"BPM\": 225.0}"
+}
+2019-01-11 15:26:05,820 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238365.819875",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238365.819875, \"BPM\": 132.0}"
+}
+2019-01-11 15:26:08,365 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238368.365643",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b\\x08\\x00L\\x15I\\x05\\x00\\x00\\x01\\x12\\x00\\x88\\x00\\x00\\x00\\x11\")"
+}
+2019-01-11 15:26:10,237 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238370.2379544",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>7\\x10\\x00L(\\x0b&\\x00\\x00\\x02\\xce\\x00O\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:26:10,812 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238370.8117857",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f*I\\x00L+\\x1c\\n\\x00\\x00\\x02Z\\x01D\\x00\\x00\\x00\\x15\")"
+}
+2019-01-11 15:26:10,814 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238370.814801",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238370.814801, \"BPM\": 198.0}"
+}
+2019-01-11 15:26:10,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238370.8153064",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238370.8153064, \"BPM\": 176.0}"
+}
+2019-01-11 15:26:10,817 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238370.817296",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e53\\x00LP\\x1eO\\x00\\x00\\x02B\\x01N\\x00\\x00\\x00\\x0b\")"
+}
+2019-01-11 15:26:10,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238370.8182988",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238370.8182988, \"BPM\": 180.0}"
+}
+2019-01-11 15:26:10,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238370.819806",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238370.819806, \"BPM\": 227.0}"
+}
+2019-01-11 15:26:10,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238370.8192983",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x17\\x18\\x00L\\x1c\\x18C\\x00\\x00\\x032\\x00\\xf6\\x00\\x00\\x00\\x03\")"
+}
+2019-01-11 15:26:10,821 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238370.8213022",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238370.8213022, \"BPM\": 134.0}"
+}
+2019-01-11 15:26:13,367 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238373.3671749",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\n7\\x00L\\x15M\\x11\\x00\\x00\\x01\\x1b\\x00\\x97\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:26:15,239 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238375.239271",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>7Z\\x00L(\\x0f\\x19\\x00\\x00\\x02\\xd5\\x00M\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:26:15,813 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238375.8131819",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f\\'\\t\\x00L+\\x1cJ\\x00\\x00\\x02D\\x00\\x10\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:26:15,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238375.8156908",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238375.8156908, \"BPM\": 200.0}"
+}
+2019-01-11 15:26:15,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238375.8156908",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238375.8156908, \"BPM\": 173.0}"
+}
+2019-01-11 15:26:15,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238375.8181968",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e5&\\x00LP!\\x03\\x00\\x00\\x02@\\x000\\x00\\x00\\x00\\x04\")"
+}
+2019-01-11 15:26:15,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238375.8191931",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238375.8191931, \"BPM\": 178.0}"
+}
+2019-01-11 15:26:15,820 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238375.8201935",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238375.8201935, \"BPM\": 227.0}"
+}
+2019-01-11 15:26:15,821 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238375.8211927",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x1d.\\x00L\\x1c\\x18A\\x00\\x00\\x035\\x00\\x80\\x00\\x00\\x00\\r\")"
+}
+2019-01-11 15:26:15,822 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238375.8221953",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238375.8221953, \"BPM\": 134.0}"
+}
+2019-01-11 15:26:18,369 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238378.368946",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b$\\x00L\\x15OU\\x00\\x00\\x01\\x1e\\x01\\x16\\x00\\x00\\x00\\x06\")"
+}
+2019-01-11 15:26:20,240 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238380.240846",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>8=\\x00L(\\x0b4\\x00\\x00\\x02\\xd3\\x00\\x15\\x00\\x00\\x00\\x08\")"
+}
+2019-01-11 15:26:20,815 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238380.8145354",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f\\x1eN\\x00L+!Q\\x00\\x00\\x02,\\x00\\x89\\x00\\x00\\x00\\x15\")"
+}
+2019-01-11 15:26:20,817 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238380.8175497",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238380.8175497, \"BPM\": 204.0}"
+}
+2019-01-11 15:26:20,818 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238380.8175497",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238380.8175497, \"BPM\": 172.0}"
+}
+2019-01-11 15:26:20,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238380.819044",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e1+\\x00LP\\x1eW\\x00\\x00\\x02B\\x01\\x16\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:26:20,821 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238380.8215518",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238380.8215518, \"BPM\": 180.0}"
+}
+2019-01-11 15:26:20,822 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238380.8220484",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x18a\\x00L\\x1c\\x18c\\x00\\x00\\x035\\x00\\xed\\x00\\x00\\x00\\t\")"
+}
+2019-01-11 15:26:20,822 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238380.8223584",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238380.8223584, \"BPM\": 228.0}"
+}
+2019-01-11 15:26:20,823 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238380.823363",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238380.823363, \"BPM\": 134.0}"
+}
+2019-01-11 15:26:23,370 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238383.370404",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b]\\x00L\\x15Q\\t\\x00\\x00\\x01\\x12\\x01a\\x00\\x00\\x00\\x03\")"
+}
+2019-01-11 15:26:25,241 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238385.2416766",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>6I\\x00L(\\n6\\x00\\x00\\x02\\xdc\\x01\\x10\\x00\\x00\\x00\\x04\")"
+}
+2019-01-11 15:26:25,816 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238385.8161082",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b'\\x02\\'\\x1f\"Y\\x00L+\\x1d\\x0b\\x00\\x00\\x024\\x00\\x92\\x00\\x00\\x00\\r')"
+}
+2019-01-11 15:26:25,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238385.819122",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238385.819122, \"BPM\": 196.0}"
+}
+2019-01-11 15:26:25,820 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238385.819122",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238385.819122, \"BPM\": 166.0}"
+}
+2019-01-11 15:26:25,821 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238385.8201177",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e6\\x06\\x00LP\\x1b\\x06\\x00\\x00\\x02?\\x00\\x10\\x00\\x00\\x00\\r\")"
+}
+2019-01-11 15:26:25,822 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238385.82212",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238385.82212, \"BPM\": 184.0}"
+}
+2019-01-11 15:26:25,823 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238385.8231196",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238385.8231196, \"BPM\": 228.0}"
+}
+2019-01-11 15:26:25,823 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238385.8226197",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x1f\\x17\\x00L\\x1c\\x18V\\x00\\x00\\x036\\x00A\\x00\\x00\\x00\\r\")"
+}
+2019-01-11 15:26:25,824 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238385.8246217",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238385.8246217, \"BPM\": 130.0}"
+}
+2019-01-11 15:26:28,371 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238388.3717344",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b\\x02\\x00L\\x15X1\\x00\\x00\\x00\\xfa\\x00C\\x00\\x00\\x00\\x10\")"
+}
+2019-01-11 15:26:30,243 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1009,
+    "Timestamp": "1547238390.243225",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'>9=\\x00L(\\x0cB\\x00\\x00\\x02\\xd2\\x00\\xed\\x00\\x00\\x00\\x07\")"
+}
+2019-01-11 15:26:30,817 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1000,
+    "Timestamp": "1547238390.8167837",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1f%\\x18\\x00L+$G\\x00\\x00\\x02A\\x00\\x0b\\x00\\x00\\x00\\x11\")"
+}
+2019-01-11 15:26:30,819 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1002,
+    "Timestamp": "1547238390.8197527",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238390.8197527, \"BPM\": 195.0}"
+}
+2019-01-11 15:26:30,821 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1001,
+    "Timestamp": "1547238390.821259",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238390.821259, \"BPM\": 163.0}"
+}
+2019-01-11 15:26:30,823 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1008,
+    "Timestamp": "1547238390.8237612",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238390.8237612, \"BPM\": 225.0}"
+}
+2019-01-11 15:26:30,824 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1005,
+    "Timestamp": "1547238390.8222575",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e:-\\x00LP\\x1d\\x06\\x00\\x00\\x02>\\x00G\\x00\\x00\\x00\\n\")"
+}
+2019-01-11 15:26:30,825 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1004,
+    "Timestamp": "1547238390.822758",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238390.822758, \"BPM\": 186.0}"
+}
+2019-01-11 15:26:30,826 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1003,
+    "Timestamp": "1547238390.8237612",
+    "SensorType": "PullGPS",
+    "Payload": "bytearray(b\"\\x02\\'Y\\x1f`\\x00L\\x1c\\x183\\x00\\x00\\x033\\x00\\x12\\x00\\x00\\x00\\x01\")"
+}
+2019-01-11 15:26:30,826 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1007,
+    "Timestamp": "1547238390.8252594",
+    "SensorType": "PullHeartRateMonitor",
+    "Payload": "{\"Time\": 1547238390.8252594, \"BPM\": 133.0}"
+}
+2019-01-11 15:26:33,373 - SWARM_Simulator - INFO - SWARMUserSensorData sent {
+    "UID": 1006,
+    "Timestamp": "1547238393.3733683",
+    "SensorType": "PushGPS",
+    "Payload": "bytearray(b\"\\x02\\'\\x1e\\x0b.\\x00L\\x15S\\x17\\x00\\x00\\x01\\x18\\x00\\x88\\x00\\x00\\x00\\x0b\")"
+}
