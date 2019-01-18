@@ -3,18 +3,18 @@ package com.nextcentury.SWARMTopology;
 import com.twitter.heron.api.tuple.Fields;
 
 public class SWARMTupleSchema {
-	final static String SCHEMA_UID = "UID";
-	final static String SCHEMA_TIMESTAMP = "Timestamp";
-	final static String SCHEMA_SENSOR_TYPE = "SensorType";
-	final static String SCHEMA_RAW_DATA = "RawData";
+	public final static String SCHEMA_UID = "UID";
+	public final static String SCHEMA_TIMESTAMP = "Timestamp";
+	public final static String SCHEMA_SENSOR_TYPE = "SensorType";
+	public final static String SCHEMA_RAW_DATA = "RawData";
 	
 	//data categories
-	final static String SCHEMA_LATITUDE = "Latitude";
-	final static String SCHEMA_LONGITUDE = "Longitude";
-	final static String SCHEMA_ALTITUDE = "Altitude";
-	final static String SCHEMA_BEARING = "Bearing";
-	final static String SCHEMA_SPEED = "Speed";
-	final static String SCHEMA_HEART_RATE = "HeartRate";
+	public final static String SCHEMA_LATITUDE = "Latitude";
+	public final static String SCHEMA_LONGITUDE = "Longitude";
+	public final static String SCHEMA_ALTITUDE = "Altitude";
+	public final static String SCHEMA_BEARING = "Bearing";
+	public final static String SCHEMA_SPEED = "Speed";
+	public final static String SCHEMA_HEART_RATE = "HeartRate";
 	
 	
 	 //JSON is turned directly to this tuple

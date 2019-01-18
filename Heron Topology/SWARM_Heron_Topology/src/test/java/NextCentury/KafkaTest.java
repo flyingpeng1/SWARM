@@ -13,6 +13,7 @@ import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import com.google.gson.Gson;
+import com.nextcentury.SWARMTopology.Util.ConfigManager;
 import com.nextcentury.SWARMTopology.Util.RawDataObj;
 import com.twitter.heron.api.spout.SpoutOutputCollector;
 import com.twitter.heron.api.utils.Utils;
@@ -20,10 +21,9 @@ import com.twitter.heron.api.utils.Utils;
 public class KafkaTest {
 
 	private static final long serialVersionUID = 1L;
-	final String BOOTSTRAP_SERVERS="192.168.34.181:9092";
-	final String TOPIC="SWARMUserSensorData";
 
-	SpoutOutputCollector collector;
+	final Properties props = ConfigManager.getProperties();
+	
 	Gson gson;
 	Consumer<Long, String> consumer;
 	Iterator<ConsumerRecord<Long, String>> recordIterator;
@@ -35,16 +35,15 @@ public class KafkaTest {
 	}
 
 	public void run() {
-
 		gson = new Gson();
 
-		final Properties props = new Properties();
-		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
-		props.put(ConsumerConfig.GROUP_ID_CONFIG, "KafkaConsumer");
-		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
-	    props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-		consumer = new KafkaConsumer<Long, String>(props);
-		consumer.subscribe(Collections.singletonList(TOPIC));
+		final Properties kafkaProps = new Properties();
+		kafkaProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, props.getProperty("KafkaServers", "127.0.0.1:9092"));
+		kafkaProps.put(ConsumerConfig.GROUP_ID_CONFIG, props.getProperty("GroupName", "Main"));
+		kafkaProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
+		kafkaProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+		consumer = new KafkaConsumer<Long, String>(kafkaProps);
+		consumer.subscribe(Collections.singletonList(props.getProperty("TopicName")));
 		updateIterator();
 
 		while(true) {

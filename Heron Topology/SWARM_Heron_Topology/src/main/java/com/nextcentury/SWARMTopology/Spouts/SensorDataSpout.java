@@ -19,6 +19,7 @@ import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import com.nextcentury.SWARMTopology.SWARMTupleSchema;
+import com.nextcentury.SWARMTopology.Util.ConfigManager;
 import com.nextcentury.SWARMTopology.Util.RawDataObj;
 import com.twitter.heron.api.spout.BaseRichSpout;
 import com.twitter.heron.api.spout.SpoutOutputCollector;
@@ -31,10 +32,10 @@ import com.google.gson.reflect.TypeToken;
 
 public class SensorDataSpout extends BaseRichSpout {
 
+	
+	public static final String SENSOR_DATA_SPOUT = "SensorDataSpout";
 	private static final long serialVersionUID = 1L;
-	final String BOOTSTRAP_SERVERS="10.44.0.7:9093";
-	final String TOPIC="SWARMUserSensorData";
-	final String GROUP_NAME="KafkaConsumer";
+	final Properties props = ConfigManager.getProperties();
 
 	SpoutOutputCollector collector;
 	Gson gson;
@@ -69,13 +70,14 @@ public class SensorDataSpout extends BaseRichSpout {
 		collector = soc;
 		gson = new Gson();
 
-		final Properties props = new Properties();
-		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
-		props.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_NAME);
-		props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
-		props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-		consumer = new KafkaConsumer<Long, String>(props);
-		consumer.subscribe(Collections.singletonList(TOPIC));
+		final Properties kafkaProps = new Properties();
+		kafkaProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, props.getProperty("KafkaServers", "127.0.0.1:9092"));
+		kafkaProps.put(ConsumerConfig.GROUP_ID_CONFIG, props.getProperty("GroupName", "Main"));
+		kafkaProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
+		kafkaProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+		consumer = new KafkaConsumer<Long, String>(kafkaProps);
+		consumer.subscribe(Collections.singletonList(props.getProperty("TopicName")));
+		updateIterator();
 	}
 
 	//----------------------------------------------
