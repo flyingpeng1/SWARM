@@ -11,6 +11,8 @@ import com.twitter.heron.api.tuple.Tuple;
 
 public class DigestRouterBolt extends BaseRichBolt {
 
+	private static final long serialVersionUID = 1L;
+
 	public final static String DIGEST_ROUTER_NODE = "DigestRouterNode";
 
 	public static final String SIM_GPS_STREAM = DIGEST_ROUTER_NODE + ".SimGPSStream";

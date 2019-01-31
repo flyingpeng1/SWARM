@@ -10,6 +10,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.annotation.Resource;
+
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -17,9 +19,12 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
 
 import com.nextcentury.SWARMTopology.SWARMTupleSchema;
-import com.nextcentury.SWARMTopology.Util.ConfigManager;
+import com.nextcentury.SWARMTopology.Util.KafkaConfig;
 import com.nextcentury.SWARMTopology.Util.RawDataObj;
 import com.twitter.heron.api.spout.BaseRichSpout;
 import com.twitter.heron.api.spout.SpoutOutputCollector;
@@ -30,12 +35,17 @@ import com.twitter.heron.api.utils.Utils;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
+@Service
+@Scope("prototype")
+@Lazy
 public class SensorDataSpout extends BaseRichSpout {
 
 	
 	public static final String SENSOR_DATA_SPOUT = "SensorDataSpout";
 	private static final long serialVersionUID = 1L;
-	final Properties props = ConfigManager.getProperties();
+	
+    @Resource
+    KafkaConfig config;
 
 	SpoutOutputCollector collector;
 	Gson gson;
@@ -71,12 +81,12 @@ public class SensorDataSpout extends BaseRichSpout {
 		gson = new Gson();
 
 		final Properties kafkaProps = new Properties();
-		kafkaProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, props.getProperty("KafkaServers", "127.0.0.1:9092"));
-		kafkaProps.put(ConsumerConfig.GROUP_ID_CONFIG, props.getProperty("GroupName", "Main"));
+		kafkaProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, config.getSpoutKafkaServers());
+		kafkaProps.put(ConsumerConfig.GROUP_ID_CONFIG, config.getSpoutKafkaGroupName());
 		kafkaProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
 		kafkaProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 		consumer = new KafkaConsumer<Long, String>(kafkaProps);
-		consumer.subscribe(Collections.singletonList(props.getProperty("TopicName")));
+		consumer.subscribe(Collections.singletonList(config.getSpoutKafkaTopicName()));
 		updateIterator();
 	}
 
