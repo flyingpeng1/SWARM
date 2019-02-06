@@ -26,6 +26,7 @@ import org.springframework.stereotype.Service;
 import com.nextcentury.SWARMTopology.SWARMTupleSchema;
 import com.nextcentury.SWARMTopology.Util.KafkaConfig;
 import com.nextcentury.SWARMTopology.Util.RawDataObj;
+import com.nextcentury.SWARMTopology.Util.SpringScanner;
 import com.twitter.heron.api.spout.BaseRichSpout;
 import com.twitter.heron.api.spout.SpoutOutputCollector;
 import com.twitter.heron.api.topology.OutputFieldsDeclarer;
@@ -77,6 +78,8 @@ public class SensorDataSpout extends BaseRichSpout {
 	//Called by Heron to initialize the node.
 	//---------------------------------------
 	public void open(Map<String, Object> map, TopologyContext tc, SpoutOutputCollector soc) {
+		SpringScanner.initializeSpring();
+		config = SpringScanner.getBean(KafkaConfig.class);
 		collector = soc;
 		gson = new Gson();
 

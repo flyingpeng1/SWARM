@@ -84,16 +84,21 @@ public class SimGPSAdapterBolt extends BaseRichBolt{
 		//---------------------
 		//Send along the data
 		//---------------------
+		try {
 		oc.emit(OUTPUT_STREAM_ID, new Values(
 				t.getStringByField(SWARMTupleSchema.SCHEMA_UID),
-				t.getStringByField(SWARMTupleSchema.SCHEMA_TIMESTAMP),
+				t.getDoubleByField(SWARMTupleSchema.SCHEMA_TIMESTAMP),
 				latitude,
 				longitude,
 				altitude,
 				bearing,
-				speed
+				speed,
+				null
 				));
 		oc.ack(t);
+		} catch (Exception e) {
+			oc.fail(t);
+		}
 	}
 
 	//---------------------

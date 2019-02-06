@@ -36,7 +36,6 @@ public abstract class KafkaPublisher extends BaseRichBolt {
 	}
 
 	public void prepare(Map<String, Object> heronConf, TopologyContext context, OutputCollector collector) {
-		
 		producer = new KafkaProducer<Long, String>(this.getKafkaProps());
 	}
 

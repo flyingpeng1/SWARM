@@ -21,6 +21,7 @@ public class SpringScanner{
      * 
      */    
     public static void initializeSpring(){
+    	System.out.println("Initializing spring");
         initializeSpring( SpringScanner.class );
     }
     

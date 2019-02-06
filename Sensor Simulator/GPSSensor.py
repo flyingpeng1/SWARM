@@ -80,7 +80,7 @@ class PullGPSSensor(Sensor.PullSensor):
 		latArray[4]=int(abs((lat*1000000)%100))
 		#long
 		longArray = [1,0,0,0,0]
-		if (long < 1):
+		if (long < 0):
 			longArray[0]=0
 		longArray[1]=int(abs(long))
 		longArray[2]=int(abs((long*100)%100))

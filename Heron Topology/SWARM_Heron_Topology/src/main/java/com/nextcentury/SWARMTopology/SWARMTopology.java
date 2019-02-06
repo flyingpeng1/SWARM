@@ -6,45 +6,58 @@ import com.twitter.heron.api.HeronSubmitter;
 
 import com.nextcentury.SWARMTopology.Bolts.*;
 import com.nextcentury.SWARMTopology.Spouts.*;
+import com.nextcentury.SWARMTopology.Util.KafkaConfig;
+import com.nextcentury.SWARMTopology.Util.SpringScanner;
+import com.nextcentury.SWARMTopology.Util.TopologyConfig;
+
+import javax.annotation.Resource;
+
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+
 import com.nextcentury.SWARMTopology.KryoSerializer;
 import com.twitter.heron.api.Config;
 import com.twitter.heron.api.topology.BoltDeclarer;
 
+@Service
+@Scope("prototype")
+@Lazy
 public class SWARMTopology {
-
-	public static final int STREAM_MANAGERS = 5;
-	public static final int BOLT_INSTANCES = 2;    
-	public static final int SPOUT_INSTANCES = 1;
+	
+    @Resource
+	static TopologyConfig springConfig;
 
 	public static void main(String args[]) throws Exception {
+		SpringScanner.initializeSpring();
+		springConfig = SpringScanner.getBean(TopologyConfig.class);
 		TopologyBuilder builder = new TopologyBuilder();
 
 		//gather JSON from Pub/Sub
-		builder.setSpout(SensorDataSpout.SENSOR_DATA_SPOUT, new SensorDataSpout(), SPOUT_INSTANCES);
+		builder.setSpout(SensorDataSpout.SENSOR_DATA_SPOUT, new SensorDataSpout(), springConfig.getSensorDataSpoutInstanceNum());
 
 		//Send sensor data to corresponding adapter
-		builder.setBolt(DigestRouterBolt.DIGEST_ROUTER_NODE, new DigestRouterBolt(), BOLT_INSTANCES)
+		builder.setBolt(DigestRouterBolt.DIGEST_ROUTER_NODE, new DigestRouterBolt(), springConfig.getDigestRouterBoltInstanceNum())
 		.shuffleGrouping(SensorDataSpout.SENSOR_DATA_SPOUT);
 
 		//adapter nodes; different nodes handle different sensors
-		builder.setBolt(SimGPSAdapterBolt.SIMGPS_ADAPTER_NODE, new SimGPSAdapterBolt(), BOLT_INSTANCES)
+		builder.setBolt(SimGPSAdapterBolt.SIMGPS_ADAPTER_NODE, new SimGPSAdapterBolt(), springConfig.getSimGPSAdapterBoltInstanceNum())
 		.shuffleGrouping(DigestRouterBolt.DIGEST_ROUTER_NODE, DigestRouterBolt.SIM_GPS_STREAM);
-		builder.setBolt(SimHeartRateAdapterBolt.SIM_HEART_RATE_ADAPTER_NODE, new SimHeartRateAdapterBolt(), BOLT_INSTANCES)
+		builder.setBolt(SimHeartRateAdapterBolt.SIM_HEART_RATE_ADAPTER_NODE, new SimHeartRateAdapterBolt(), springConfig.getSimHeartRateAdapterBoltInstanceNum())
 		.shuffleGrouping(DigestRouterBolt.DIGEST_ROUTER_NODE, DigestRouterBolt.SIM_HEART_RATE_STREAM);
 
 		//collects and distributes normalized tuples
-		BoltDeclarer NormalizedRouter = builder.setBolt(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, new NormalizedRouterBolt(), BOLT_INSTANCES);
+		BoltDeclarer NormalizedRouter = builder.setBolt(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, new NormalizedRouterBolt(), springConfig.getNormalizedRouterBoltInstanceNum());
 		NormalizedRouter.shuffleGrouping(SimGPSAdapterBolt.SIMGPS_ADAPTER_NODE, SimGPSAdapterBolt.OUTPUT_STREAM_ID);
 		NormalizedRouter.shuffleGrouping(SimHeartRateAdapterBolt.SIM_HEART_RATE_ADAPTER_NODE, SimHeartRateAdapterBolt.OUTPUT_STREAM_ID);
 
 		//nodes for using normalized data
-		builder.setBolt(NormalizedAnalyticsPlaceholderBolt.NORMALIZED_ANALYTICS_PLACEHOLDER_NODE, new NormalizedAnalyticsPlaceholderBolt())
-		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE);
-		builder.setBolt(NormalizedDatabaseBolt.NORMALIZED_DATABASE_NODE, new NormalizedDatabaseBolt())
-		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE);
-		builder.setBolt(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE, new NormalizedPubSubBolt())
-		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE);
-
+		builder.setBolt(NormalizedAnalyticsPlaceholderBolt.NORMALIZED_ANALYTICS_PLACEHOLDER_NODE, new NormalizedAnalyticsPlaceholderBolt(), springConfig.getNormalizedAnalyticsPlaceholderBoltInstanceNum())
+		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, NormalizedRouterBolt.ANALYTICS_DATA_STREAM);
+		builder.setBolt(NormalizedDatabaseBolt.NORMALIZED_DATABASE_NODE, new NormalizedDatabaseBolt(), springConfig.getNormalizedDatabaseBoltInstanceNum())
+		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, NormalizedRouterBolt.NORMALIZED_DATABASE_STREAM);
+		builder.setBolt(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE, new NormalizedPubSubBolt(), springConfig.getNormalizedPubSubBoltInstanceNum())
+		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, NormalizedRouterBolt.NORMALIZED_KAFKA_STREAM);
 		//------------------------------------------------
 		//Configuration. Borrowed from HeronTest Topology.
 		//------------------------------------------------
@@ -75,19 +88,19 @@ public class SWARMTopology {
 		conf.setMaxSpoutPending(1000 * 1000 * 1000);//large number to prevent a max
 		conf.setTopologyReliabilityMode(Config.TopologyReliabilityMode.ATMOST_ONCE); //Config.TopologyReliabilityMode.ATLEAST_ONCE
 		conf.put(Config.TOPOLOGY_WORKER_CHILDOPTS, "-XX:+HeapDumpOnOutOfMemoryError");
-		conf.setNumStmgrs(STREAM_MANAGERS); //number of stream managers        
+		conf.setNumStmgrs(springConfig.getStreamManagerNum()); //number of stream managers        
 
-		conf.setComponentRam(SensorDataSpout.SENSOR_DATA_SPOUT, ByteAmount.fromMegabytes(500));  
-		conf.setComponentRam(DigestRouterBolt.DIGEST_ROUTER_NODE, ByteAmount.fromMegabytes(200)); 
-		conf.setComponentRam(SimGPSAdapterBolt.SIMGPS_ADAPTER_NODE, ByteAmount.fromMegabytes(200));
-		conf.setComponentRam(SimHeartRateAdapterBolt.SIM_HEART_RATE_ADAPTER_NODE, ByteAmount.fromMegabytes(200));
-		conf.setComponentRam(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, ByteAmount.fromMegabytes(200)); 
-		conf.setComponentRam(NormalizedAnalyticsPlaceholderBolt.NORMALIZED_ANALYTICS_PLACEHOLDER_NODE,  ByteAmount.fromMegabytes(200));
-		conf.setComponentRam(NormalizedDatabaseBolt.NORMALIZED_DATABASE_NODE,  ByteAmount.fromMegabytes(200));
-		conf.setComponentRam(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE,  ByteAmount.fromMegabytes(200));
+		conf.setComponentRam(SensorDataSpout.SENSOR_DATA_SPOUT, ByteAmount.fromMegabytes(springConfig.getSensorDataSpoutRAM()));  
+		conf.setComponentRam(DigestRouterBolt.DIGEST_ROUTER_NODE, ByteAmount.fromMegabytes(springConfig.getDigestRouterBoltRAM())); 
+		conf.setComponentRam(SimGPSAdapterBolt.SIMGPS_ADAPTER_NODE, ByteAmount.fromMegabytes(springConfig.getSimGPSAdapterBoltRAM()));
+		conf.setComponentRam(SimHeartRateAdapterBolt.SIM_HEART_RATE_ADAPTER_NODE, ByteAmount.fromMegabytes(springConfig.getSimHeartRateAdapterBoltRAM()));
+		conf.setComponentRam(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, ByteAmount.fromMegabytes(springConfig.getNormalizedRouterBoltRAM())); 
+		conf.setComponentRam(NormalizedAnalyticsPlaceholderBolt.NORMALIZED_ANALYTICS_PLACEHOLDER_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedAnalyticsPlaceholderBoltRAM()));
+		conf.setComponentRam(NormalizedDatabaseBolt.NORMALIZED_DATABASE_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedDatabaseBoltRAM()));
+		conf.setComponentRam(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedPubSubBoltRAM()));
 
-		conf.setContainerDiskRequested(ByteAmount.fromGigabytes(2)); 
-		conf.setContainerCpuRequested(1);
+		conf.setContainerDiskRequested(ByteAmount.fromGigabytes(springConfig.getContainerDiskSpaceNum())); 
+		conf.setContainerCpuRequested(springConfig.getContainerRequestedCPU());
 
 		HeronSubmitter.submitTopology(args[0], conf, builder.createTopology());
 	}
