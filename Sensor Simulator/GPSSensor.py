@@ -71,16 +71,16 @@ class PullGPSSensor(Sensor.PullSensor):
 	#-------------------------------------
 	def latLongToBytes(self, lat, long, altitude, bearing, speed):
 		#lat
-		latArray = [2,0,0,0,0]
+		latArray = [1,0,0,0,0]
 		if (lat < 0):
-			latArray[0]=1
+			latArray[0]=0
 		latArray[1]=int(abs(lat))
 		latArray[2]=int(abs((lat*100)%100))
 		latArray[3]=int(abs((lat*10000)%100))
 		latArray[4]=int(abs((lat*1000000)%100))
 		#long
-		longArray = [2,0,0,0,0]
-		if (long < 1):
+		longArray = [1,0,0,0,0]
+		if (long < 0):
 			longArray[0]=0
 		longArray[1]=int(abs(long))
 		longArray[2]=int(abs((long*100)%100))
@@ -106,7 +106,7 @@ class PullGPSSensor(Sensor.PullSensor):
 		d = int(spe % 4294967296 / 16777216)
 		speArray = [d, c, b, a]
 		
-		return bytearray(latArray + longArray + altArray + berArray + speArray)
+		return bytearray(latArray + longArray + altArray + berArray + speArray).hex()
 
 #------------------------------------------
 #Push-style GPS sensor (returns bytearray).
@@ -206,4 +206,4 @@ class PushGPSSensor(Sensor.PushSensor):
 		c = int(spe % 16777216 / 65536)
 		d = int(spe % 4294967296 / 16777216)
 		speArray = [d, c, b, a]
-		return bytearray(latArray + longArray + altArray + berArray + speArray)
+		return bytearray(latArray + longArray + altArray + berArray + speArray).hex()

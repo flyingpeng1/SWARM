@@ -19,7 +19,7 @@ class SPFJsonFactory:
 		data['UID']=UID
 		data['Timestamp']=str(self.getCurrentTime())
 		data['SensorType']=SensorType
-		data['Payload']=str(list(payload))
+		data['Payload']=str(payload)
 		return data
 	
 	#---------------------------------------
