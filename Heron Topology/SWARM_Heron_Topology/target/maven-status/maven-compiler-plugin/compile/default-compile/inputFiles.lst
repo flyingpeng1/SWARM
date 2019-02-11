@@ -7,6 +7,7 @@ C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Bolts\NormalizedDatabaseBolt.java
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Bolts\NormalizedPubSubBolt.java
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Bolts\SimGPSAdapterBolt.java
+C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Bolts\MetricsBolt.java
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\KryoSerializer.java
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Spouts\SensorDataSpout.java
 C:\cygwin64\home\jwilcom\git\SWARM\Heron Topology\SWARM_Heron_Topology\src\main\java\com\nextcentury\SWARMTopology\Bolts\SimHeartRateAdapterBolt.java

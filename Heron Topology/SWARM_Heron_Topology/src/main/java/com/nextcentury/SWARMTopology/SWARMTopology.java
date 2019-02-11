@@ -58,6 +58,13 @@ public class SWARMTopology {
 		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, NormalizedRouterBolt.NORMALIZED_DATABASE_STREAM);
 		builder.setBolt(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE, new NormalizedPubSubBolt(), springConfig.getNormalizedPubSubBoltInstanceNum())
 		.shuffleGrouping(NormalizedRouterBolt.NORMALIZED_ROUTER_NODE, NormalizedRouterBolt.NORMALIZED_KAFKA_STREAM);
+		
+		//optional metrics node
+		if (springConfig.getEnableMetricsNode()) {
+		builder.setBolt(MetricsBolt.METRICS_NODE, new MetricsBolt(), springConfig.getMetricsBoltInstanceNum())
+		.shuffleGrouping(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE);
+		}
+		
 		//------------------------------------------------
 		//Configuration. Borrowed from HeronTest Topology.
 		//------------------------------------------------
@@ -98,7 +105,12 @@ public class SWARMTopology {
 		conf.setComponentRam(NormalizedAnalyticsPlaceholderBolt.NORMALIZED_ANALYTICS_PLACEHOLDER_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedAnalyticsPlaceholderBoltRAM()));
 		conf.setComponentRam(NormalizedDatabaseBolt.NORMALIZED_DATABASE_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedDatabaseBoltRAM()));
 		conf.setComponentRam(NormalizedPubSubBolt.NORMALIZED_PUBSUB_NODE,  ByteAmount.fromMegabytes(springConfig.getNormalizedPubSubBoltRAM()));
-
+		
+		if (springConfig.getEnableMetricsNode()) {
+			conf.setComponentJvmOptions(MetricsBolt.METRICS_NODE, jvmOptions);
+			conf.setComponentRam(MetricsBolt.METRICS_NODE,  ByteAmount.fromMegabytes(springConfig.getMetricsBoltRAM()));
+		}
+		
 		conf.setContainerDiskRequested(ByteAmount.fromGigabytes(springConfig.getContainerDiskSpaceNum())); 
 		conf.setContainerCpuRequested(springConfig.getContainerRequestedCPU());
 

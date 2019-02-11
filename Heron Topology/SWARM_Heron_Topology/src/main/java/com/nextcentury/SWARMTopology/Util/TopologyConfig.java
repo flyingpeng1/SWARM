@@ -119,4 +119,30 @@ public class TopologyConfig implements Serializable {
     public int getNormalizedPubSubBoltInstanceNum() {
     	return NormalizedPubSubBoltInstanceNum;
     }
+    
+	@Value("${Node.MetricsBolt.RAM}")
+    private int MetricsBoltRAM;
+    public int getMetricsBoltRAM() {
+    	return MetricsBoltRAM;
+    }
+	@Value("${Node.MetricsBolt.InstanceNum}")
+    private int MetricsBoltInstanceNum;
+    public int getMetricsBoltInstanceNum() {
+    	return MetricsBoltInstanceNum;
+    }
+    
+    //------------------------------------
+    //Debug parameters.
+    //------------------------------------
+	@Value("${Debug.EnableMetricsNode}")
+    private boolean EnableMetricsNode;
+    public boolean getEnableMetricsNode() {
+    	return EnableMetricsNode;
+    }
+    
+	@Value("${Debug.UseIngestTime}")
+    private boolean UseIngestTime;
+    public boolean getUseIngestTime() {
+    	return UseIngestTime;
+    }
 }

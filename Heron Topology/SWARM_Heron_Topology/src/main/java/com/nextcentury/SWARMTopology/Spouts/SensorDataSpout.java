@@ -27,6 +27,7 @@ import com.nextcentury.SWARMTopology.SWARMTupleSchema;
 import com.nextcentury.SWARMTopology.Util.KafkaConfig;
 import com.nextcentury.SWARMTopology.Util.RawDataObj;
 import com.nextcentury.SWARMTopology.Util.SpringScanner;
+import com.nextcentury.SWARMTopology.Util.TopologyConfig;
 import com.twitter.heron.api.spout.BaseRichSpout;
 import com.twitter.heron.api.spout.SpoutOutputCollector;
 import com.twitter.heron.api.topology.OutputFieldsDeclarer;
@@ -41,12 +42,15 @@ import com.google.gson.reflect.TypeToken;
 @Lazy
 public class SensorDataSpout extends BaseRichSpout {
 
-	
+
 	public static final String SENSOR_DATA_SPOUT = "SensorDataSpout";
 	private static final long serialVersionUID = 1L;
-	
-    @Resource
-    KafkaConfig config;
+
+	@Resource
+	KafkaConfig config;
+
+	@Resource
+	TopologyConfig TConf;
 
 	SpoutOutputCollector collector;
 	Gson gson;
@@ -57,20 +61,29 @@ public class SensorDataSpout extends BaseRichSpout {
 	//Called by Heron to get next data list.
 	//---------------------------------------
 	public void nextTuple() {
-		
+
 		String JsonString = newJson();
-		
+
 		if (JsonString!=null) {
 			RawDataObj Rdo = JsonToMap(JsonString);
 
 			String messageUUID =  "UID" + "." +  "SENSOR_TYPE" + "." + System.currentTimeMillis();
 
-			collector.emit(new Values(
-					Rdo.getUID(),
-					Rdo.getTimestamp(),
-					Rdo.getSensorType(),
-					Rdo.getPayload()),
-					messageUUID);
+			if (TConf.getUseIngestTime()) {
+				collector.emit(new Values(
+						Rdo.getUID(),
+						(double)(new Long(System.currentTimeMillis()).doubleValue()/1000d),
+						Rdo.getSensorType(),
+						Rdo.getPayload()),
+						messageUUID);
+			} else {
+				collector.emit(new Values(
+						Rdo.getUID(),
+						Rdo.getTimestamp(),
+						Rdo.getSensorType(),
+						Rdo.getPayload()),
+						messageUUID);
+			}
 		}
 	}
 
@@ -80,6 +93,7 @@ public class SensorDataSpout extends BaseRichSpout {
 	public void open(Map<String, Object> map, TopologyContext tc, SpoutOutputCollector soc) {
 		SpringScanner.initializeSpring();
 		config = SpringScanner.getBean(KafkaConfig.class);
+		TConf = SpringScanner.getBean(TopologyConfig.class);
 		collector = soc;
 		gson = new Gson();
 
@@ -121,7 +135,7 @@ public class SensorDataSpout extends BaseRichSpout {
 			return null;
 		}
 	}
-	
+
 	//---------------------------------------------------------
 	//Refills the record list with new records from the topic.
 	//---------------------------------------------------------
