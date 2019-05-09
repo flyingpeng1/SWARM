@@ -1,0 +1,71 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="resizeTest.css">
+
+    <title>Simple Split Panels - jquery-resizable</title>
+    <meta charset="utf-8"/>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>
+  
+</head>
+<body style="">
+    <div class="page-container">
+
+        <h1>
+           jquery-resizable - A simple splitter panel
+        </h1>
+        <hr />
+
+        <p>
+            Simple example that demonstrates how to create slidable two-pane layouts <a href="http://caniuse.com/#search=flexbox">using FlexBox</a> and the resizable plug-in.
+            Note that Flexbox is not required, but used here to keep the layout simple.
+        </p>
+
+        <label>Horizontal Splitter Panes:</label>
+
+        <div class="panel-container">
+
+		<div class="panel-left">
+        <div class="panel-container innerCont">
+            <div class="panel-left">
+                left panel
+            </div>
+
+            <div class="splitter">
+            </div>
+
+			<div class="panel-right">
+                left panel
+            </div>
+		</div>
+		</div>
+            
+			<div class="splitter">
+            </div>
+			
+			<div class="panel-center">
+                right panel
+            </div>
+			
+
+        </div>
+
+        <label>Vertical Splitter Panes:</label>
+        <div class="panel-container-vertical">
+
+            <div class="panel-top">
+                top panel
+            </div>
+
+            <div class="splitter-horizontal">
+            </div>
+
+            <div class="panel-bottom">
+                bottom panel
+            </div>
+        </div>
+    </div>
+  <script src="resize.js"></script>
+</body>
+</html>

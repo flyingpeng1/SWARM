@@ -1,0 +1,42 @@
+{
+	"__comment__":"number of users to be simulated",
+    "Numusers": "500",
+	
+	"__comment__":"Sensors per user config: SensorType should have max # of sensors in array",
+	"NumSensorsMin": "2",
+    "NumSensorsMax": "2",
+	"SensorTypes":[
+		"PushGPS", "PullHeartRateMonitor"
+	],
+	
+	"__comment__":"Pull delay in seconds",
+	"PullDelay":".1",
+	
+	"__comment__":"Sensor delay in seconds",
+	"SensorDelay":".2",
+	
+	"__comment__":"GPS Sensor config",
+	"randomizeDeltaLongMult":"True",
+	"deltaLong":"2",
+	"randomizeDeltaLatMult":"True",
+	"deltaLat":"2",
+	"randomizeDeltaAltMult":"True",
+	"deltaAlt":"5",
+	"randomizeStartLat":"True",
+	"startLat":"39.",
+	"randomizeStartLong":"True",
+	"startLong":"-76.",
+	"randomizeStartAlt":"True",
+	"startAlt":"10",
+	
+	"__comment__":"Heart Rate Sensor config",
+	"RandomizeBPMMult":"True",
+	"BPMMult":"1",
+	"RandomizeStartBPM":"True",
+	"startBPM":"90"
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: swarmsimulator
+  labels:
+    app: swarmsimulator
+spec:
+  containers:
+  - name: swarmsimulatorcontainer
+    image: flyingpenguin2001/swarmsensorsimulator:latest

@@ -1,0 +1,42 @@
+body {
+    background-color: #eeeeff;
+}
+
+.backgroundWhite {
+    background-color: #f7f7f7;
+}
+
+.btn-orange, .btn-orange:visited {
+    background-color: #ff8300 !important;
+}
+
+.btn-orange:hover, .btn-orange:active{
+	background-color: #e87700 !important;
+}
+
+.border-4 {
+    border-width:4px !important;
+}
+
+.border-orange {
+	border-color: #ff8300 !important;
+}
+
+.ScrollBar {
+  height: 340px;
+  overflow-y: scroll;
+}
+
+.resizeHorizontal {
+	resize: horizontal !important;
+	overflow: auto;
+}
+
+#map_wrapper {
+    height: 430px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}

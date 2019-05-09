@@ -1,0 +1,11 @@
+{
+	"use_kafka":"True",
+	"retries": "0",
+    "acks": "0",
+	"bootstrap_servers":[
+		"192.168.34.181:9092"
+	],
+	"topicName":"SWARMUserSensorData",
+	
+	"use_redis":"False"
+}

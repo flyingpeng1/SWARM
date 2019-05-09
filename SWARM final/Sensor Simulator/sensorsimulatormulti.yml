@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: swarmsimulatordeployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: swarmsimulator
+    spec:
+      containers:
+      - name: swarmsimulatorcontainer
+        image: flyingpenguin2001/swarmsensorsimulator:latest
+        resources:
+         requests:
+          cpu: 0.5
+          memory: 300
+

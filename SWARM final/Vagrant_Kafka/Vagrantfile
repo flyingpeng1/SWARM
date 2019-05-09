@@ -1,0 +1,47 @@
+require 'yaml'
+
+# Get the current root directory
+vagrant_root = File.dirname(__FILE__)
+
+# Get the path to our configuration file
+defaults_config_filepath = vagrant_root + '/provider/configuration/defaults.yml'
+
+# Get the path to our containers.yaml file
+containers_filepath = vagrant_root + '/docker/containers.yml'
+
+# Start our vagrant configuration
+Vagrant.configure('2') do |config|
+
+  # Read in our yaml configuration file
+  properties = YAML.load(File.read(defaults_config_filepath))
+
+  # Read in our yaml container file
+  containers = YAML.load(File.read(containers_filepath))
+
+  # Define and configure our provider
+  config.vm.provider 'virtualbox' do |vm|
+    vm.memory = properties['vm']['memory']
+    vm.cpus = properties['vm']['cpus']
+  end
+
+  # Get our box from our configuration file
+  config.vm.box = properties['vm']['box']
+
+  # Configure our private network
+  config.vm.network 'private_network', ip: properties['vm']['network_ip']
+
+  # Setup a synced folder
+  config.vm.synced_folder ".", "/vagrant/"
+  
+  # Load our docker containers
+  containers.each do |container|
+    config.vm.provision "docker" do |d|
+      d.build_image "/vagrant/" + container["dir"],
+                    args: "-t %s" % container["name"]
+    end
+  end
+
+  # Provision our docker containers with docker compose
+  config.vm.provision 'docker_compose', yml: "/vagrant/docker/docker-compose.yml", run: "always"
+
+end

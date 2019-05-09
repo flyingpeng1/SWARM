@@ -1,0 +1,28 @@
+.center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.border {
+    border: 5px solid grey;
+    padding: 3px;
+}
+	
+.centerText {
+    text-align: center;
+}
+	
+.pad20 {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.loginPanel {
+	padding-top: 20px;
+}
